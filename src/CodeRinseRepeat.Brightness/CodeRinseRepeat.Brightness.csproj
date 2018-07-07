@@ -12,6 +12,12 @@
     <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
     <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
     <RootNamespace>CodeRinseRepeat.Brightness</RootNamespace>
+    <Description>A small command-line tool for managing monitor brightness on Windows.</Description>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/bojanrajkovic/clibright/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/bojanrajkovic/clibright</PackageProjectUrl>
+    <PackageTags>command-line windows brightness monitor tools</PackageTags>
+    <Authors>bojanrajkovic</Authors>
+    <RepositoryUrl>$(PackageProjectUrl)</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
