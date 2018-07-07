@@ -37,3 +37,4 @@ confirm that it works, please send a pull request to update the table!
 | Manufacturer | Model        | Firmware Version (optional)  |
 |--------------|--------------|------------------------------|
 | Dell         | U2718Q       | M2B101                       |
+| LG           | 27UD88       |                              |
