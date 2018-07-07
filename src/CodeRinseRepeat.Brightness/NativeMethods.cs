@@ -19,10 +19,8 @@ namespace CodeRinseRepeat.Brightness
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         public static extern bool GetMonitorInfo(IntPtr hMonitor, ref MonitorInfoEx lpmi);
 
-
         [DllImport("dxva2.dll", EntryPoint = "GetNumberOfPhysicalMonitorsFromHMONITOR")]
         public static extern bool GetNumberOfPhysicalMonitorsFromHMonitor(IntPtr hMonitor, out uint numberOfMonitors);
-
 
         [DllImport("dxva2.dll", EntryPoint = "GetPhysicalMonitorsFromHMONITOR")]
         public static extern bool GetPhysicalMonitorsFromHMonitor(
@@ -49,12 +47,6 @@ namespace CodeRinseRepeat.Brightness
 
             bool EnumMonitorsCallback(IntPtr monitor, IntPtr hdcMonitor, ref Rect lprcMonitor, IntPtr data)
             {
-                var monitorInfo = new MonitorInfoEx(0);
-                if (!GetMonitorInfo(monitor, ref monitorInfo)) {
-                    Console.WriteLine("Could not get monitor info for monitor 0x{0:X}.", monitor.ToInt64());
-                    return true;
-                }
-
                 GetNumberOfPhysicalMonitorsFromHMonitor(monitor, out var numberOfMonitors);
 
                 var innerPhysicalMonitors = new PhysicalMonitor[numberOfMonitors];

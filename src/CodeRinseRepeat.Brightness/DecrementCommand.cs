@@ -17,7 +17,7 @@ namespace CodeRinseRepeat.Brightness
                 "Decrement the current monitor brightness percentage by the given value.",
                 { "h|?|help", "Show this message and exit.", v => showHelp = v != null },
                 {
-                    "i|index",
+                    "i|index:",
                     "Physical monitor index to change brightness for. " +
                     "0 indicates all monitors, see the list command to get a monitor's index.",
                     (uint v) => monitorIndex = v

@@ -19,7 +19,9 @@ namespace CodeRinseRepeat.Brightness
             "Available commands:",
             new IncrementCommand(),
             new DecrementCommand(),
-            new SetCommand()
+            new GetCommand(),
+            new SetCommand(),
+            new ListCommand(),
         };
 
         static int Main(string[] args) => brightnessCommandSet.Run(args);
